@@ -2,7 +2,7 @@
  * LL.cpp
  *
  *  Created on: Feb 3, 2018
- *      Author: Powerlifter
+ *      Author: Sidhant Chadha
  */
 
 #include "LL.h"
