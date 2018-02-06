@@ -28,6 +28,16 @@ public:
 	void deleteNode(int);
 	void insertNode(int);
 	void reverseList();
+	int getSize();
+	bool isEmpty();
+	void valueAt(int);
+	void pushFront(int);
+	void popFront();
+	void popBack();
+	void getFrontValue();
+	void getLastValue();
+	void insertAtPosition(int,int);
+	void deleteAtPosition(int);
 };
 
 
