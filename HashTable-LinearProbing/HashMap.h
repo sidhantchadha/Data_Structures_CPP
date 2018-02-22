@@ -35,6 +35,7 @@ public:
 	int sizeOf();
 	bool isEmpty();
 	void display();
+	bool find(int);
 
 };
 

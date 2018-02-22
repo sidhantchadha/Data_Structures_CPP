@@ -63,3 +63,15 @@ void HashMap::display() {
 			cout<<"Key: "<<table[i]->key<<" "<<"Value: "<<table[i]->value<<endl;
 	}
 }
+
+bool HashMap::find(int key){
+	int hash=hashFunc(key);
+	while(table[hash]!=NULL) {
+		if(table[hash]->key==key)
+			return true;
+		hash=hashFunc(hash+1);
+	}
+	return false;
+}
+
+

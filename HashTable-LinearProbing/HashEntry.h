@@ -1,9 +1,4 @@
-/*
- * HashEntry.h
- *
- *  Created on: Feb 21, 2018
- *      Author: Powerlifter
- */
+
 
 #ifndef HASHENTRY_H_
 #define HASHENTRY_H_

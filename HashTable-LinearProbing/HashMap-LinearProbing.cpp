@@ -37,6 +37,21 @@ int main() {
 	h.display();
 	cout<<"Size of HashTable (Items present): "<<h.sizeOf()<<endl;
 	cout<<"Search for Value at Key 1: "<<h.get(1)<<endl;
+	cout<<"Does a value exist at key=7?"<<endl;
+	if(h.find(7))
+		cout<<"Yes, value exists!"<<endl;
+	else
+		cout<<"Value does not exist! Bucket is empty!"<<endl;
+	cout<<"Does a value exist at key=13?"<<endl;
+		if(h.find(13))
+			cout<<"Yes, value exists!"<<endl;
+		else
+			cout<<"Value does not exist! Bucket is empty!"<<endl;
+	h.insert(8,28);
+	cout<<"Size of HashTable (Items present): "<<h.sizeOf()<<endl;
+	h.display();
+
+
 
 
 	return 0;
