@@ -12,15 +12,14 @@
 using namespace std;
 //Complexity: Linear : O(M+N)//
 
-void getCount(string s, string str) {
+void removeSpecifiedChars(string s, string str) {
 	vector<int>count(s.size(),0);
-	int size=s.length();
 	string final="";
-	for(int i=0;i<size;i++)
+	for(int i=0;i<s.size();i++)
 		count[s[i]]++;
 	for(int j=0;j<str.size();j++) {
 		if(count[str[j]]!=1)
-		final=final+str[j];
+		final+=str[j];
 }
 	cout<<final;
 }
@@ -28,6 +27,6 @@ void getCount(string s, string str) {
 int main() {
 	string a="Thqe ruqnytqyimqe pyoqf yqtphisq pqcypoqdye yisq lqinyeqayr!! yOp(qqyNy+pM) ;) ";
 	string b="qyp";
-	getCount(b,a);
+	removeSpecifiedChars(b,a);
 	return 0;
 }
