@@ -9,6 +9,7 @@
 #include <iostream>
 #include <algorithm>
 #include <stack>
+#include <ctype.h>
 using namespace std;
 //Complexity: Linear: O(N)
 
@@ -16,7 +17,7 @@ void reverseWord(string s) {
 
 	for(int i=0;i<s.size();i++) {
 		int begin=i;
-		while(isalpha(s[i]))
+		while(isalnum(s[i]))
 			i++;
 		int stop=i;
 		reverse(s.begin()+begin,s.begin()+stop); 	//to reverse characters in a word//
