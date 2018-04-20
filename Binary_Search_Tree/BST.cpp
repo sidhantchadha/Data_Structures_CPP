@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include <queue>
 #include "BST.h"
 
 using namespace std;
@@ -208,4 +209,56 @@ int BST::maxNode(TreeNode *p) {
 
 int BST::max() {
 	return maxNode(root);
+}
+
+int BST:: lowestCommonAncestor(TreeNode *p,int v1,int v2) {
+	if(p==NULL)
+		return -1;
+	while(p) {
+	 if(v1 < p->value && v2 < p->value)
+			p=p->left;
+	else if(v1 > p->value && v2 > p->value)
+			p=p->right;
+	else
+			return p->value;
+	}
+	return NULL;
+
+
+
+}
+
+int BST::ComAncestor(int v1,int v2){
+	return lowestCommonAncestor(root,v1,v2);
+}
+
+int BST:: getSuccessorNode(TreeNode *p) {
+	if(p==NULL || p->right==NULL)
+		return -1;
+	else { p=p->right;
+			return p->value;
+	}
+	return NULL;
+}
+
+int BST:: getSuccessor() {
+	return getSuccessorNode(root);
+}
+
+void BST:: printLevelorder(TreeNode *p) const {
+	queue<TreeNode*>q;
+	if(p)
+		q.push(p);
+	while(!q.empty()) {
+		if(p->left)
+			q.push(p->left);
+		if(p->right)
+			q.push(p->right);
+
+	cout<<q.front()->value<<" ";
+	q.pop();
+	p=q.front();
+	}
+
+
 }

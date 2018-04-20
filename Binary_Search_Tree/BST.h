@@ -23,6 +23,7 @@ private:
 	void printInorder(TreeNode *) const ;
 	void printPreorder(TreeNode *) const;
 	void printPostorder(TreeNode *) const;
+	void printLevelorder(TreeNode *) const;
 
 	int countNodes(TreeNode *);
 	int countLeaf(TreeNode *);
@@ -30,6 +31,10 @@ private:
 
 	int minNode(TreeNode *);
 	int maxNode(TreeNode *);
+
+	int lowestCommonAncestor(TreeNode *,int,int);
+	int getSuccessorNode(TreeNode *);
+
 
 public:
 	BST(){
@@ -52,6 +57,10 @@ public:
 	void displayPostorder() const {
 		printPostorder(root);
 	}
+	void displayLevelorder() const {
+		printLevelorder(root);
+	}
+
 
 	int count();
 	int countL();
@@ -59,6 +68,10 @@ public:
 
 	int min();
 	int max();
+
+	int ComAncestor(int,int);
+	int getSuccessor();
+
 
 
 };

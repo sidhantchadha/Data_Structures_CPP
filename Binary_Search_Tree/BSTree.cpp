@@ -42,8 +42,7 @@ int main() {
 		cout<<"Inorder traversal"<<endl;
 		t1.displayInorder();
 		cout<<endl;
-		cout << "Remove Node 10" << endl;
-		t1.remove(10);
+
 		cout<<"PostOrder traversal"<<endl;
 		t1.displayPostorder();
 		cout<<endl;
@@ -55,5 +54,11 @@ int main() {
 
 		cout << "Minimum Node value in Tree is: "<<t1.min()<<endl;
 		cout << "Maximum Node value in Tree is: "<<t1.max()<<endl;
+
+		cout<< "Lowest common ancestor for  7 and 4 is: "<<t1.ComAncestor(4,7)<<endl;
+		cout<<"The successor node for 5 is: "<<t1.getSuccessor()<<endl;
+
+		cout<<"Level order traversal "<<endl;
+		t1.displayLevelorder();
 
 }
