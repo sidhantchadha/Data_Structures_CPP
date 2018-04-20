@@ -58,7 +58,7 @@ bool HashMap:: isEmpty() {
 
 void HashMap::display() {
 	for(int i=0;i<capacity;i++) {
-		if(table[i]!=NULL)
+		if(table[i]!=NULL && table[i]!=dummy)
 
 			cout<<"Key: "<<table[i]->key<<" "<<"Value: "<<table[i]->value<<endl;
 	}
