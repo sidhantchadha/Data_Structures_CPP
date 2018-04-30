@@ -24,6 +24,7 @@ private:
 	void printPreorder(TreeNode *) const;
 	void printPostorder(TreeNode *) const;
 	void printLevelorder(TreeNode *) const;
+	void printZigzagorder(TreeNode *) const;
 
 	int countNodes(TreeNode *);
 	int countLeaf(TreeNode *);
@@ -60,6 +61,9 @@ public:
 	void displayLevelorder() const {
 		printLevelorder(root);
 	}
+	void displayZigzagorder() const {
+			printZigzagorder(root);
+		}
 
 
 	int count();

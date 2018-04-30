@@ -61,4 +61,7 @@ int main() {
 		cout<<"Level order traversal "<<endl;
 		t1.displayLevelorder();
 
+		cout<<"\nZigzag level order traversal "<<endl;
+		t1.displayZigzagorder();
+
 }

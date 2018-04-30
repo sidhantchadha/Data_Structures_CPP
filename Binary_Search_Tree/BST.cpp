@@ -222,7 +222,7 @@ int BST:: lowestCommonAncestor(TreeNode *p,int v1,int v2) {
 	else
 			return p->value;
 	}
-	return NULL;
+	return -1;
 
 
 
@@ -238,7 +238,7 @@ int BST:: getSuccessorNode(TreeNode *p) {
 	else { p=p->right;
 			return p->value;
 	}
-	return NULL;
+	return -1;
 }
 
 int BST:: getSuccessor() {
@@ -260,5 +260,30 @@ void BST:: printLevelorder(TreeNode *p) const {
 	p=q.front();
 	}
 
+
+}
+
+void BST:: printZigzagorder(TreeNode *p) const {
+	queue<TreeNode*>q;
+	q.push(p);
+	int level=1;
+	vector<int>V;
+	while(!q.empty()){
+		if(p->left)
+			q.push(p->left);
+		if(p->right)
+			q.push(p->right);
+		if(level==1)
+			V.push_back(q.front()->value);
+		else
+			V.insert(V.begin(),q.front()->value);
+		q.pop();
+		level=-level;
+		p=q.front();
+
+	}
+
+	for(auto i=V.begin();i!=V.end();i++)
+		cout<<*i<<" ";
 
 }
